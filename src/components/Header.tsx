@@ -28,7 +28,7 @@ export default function Header() {
 
   const navItems = [
     {
-      href: "https://moonmouse",
+      href: "https://moonmouse.io",
       title: "HOME",
     },
     {
@@ -88,7 +88,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="hidden lg:block">
-          <Link href="https://moonmouse">
+          <Link href="https://moonmouse.io">
             <Image
               src="/img/moonmouse-text.png"
               width={300}
@@ -106,7 +106,7 @@ export default function Header() {
         */}
         <nav className="flex space-x-4 lg:space-x-8">
           <a
-            href="https://moonmouse"
+            href="https://moonmouse.io"
             className="hover:underline hover:underline-offset-4 transition-all duration-150 hidden lg:block mt-5 menu-item"
           >
             HOME

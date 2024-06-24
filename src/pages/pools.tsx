@@ -1165,7 +1165,6 @@ function PoolCardDatabaseBodyCollapseItemContent({ poolInfo: info }: { poolInfo:
                   }`}
                 onClick={() => {
                   routeTo('/farms', {
-                    //@ts-expect-error no need to care about enum of this error
                     queryProps: objectShakeFalsy({
                       currentTab: correspondingFarm?.category ? capitalize(correspondingFarm?.category) : undefined,
                       newExpandedItemId: toPubString(correspondingFarm?.id),
