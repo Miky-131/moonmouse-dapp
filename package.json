@@ -23,7 +23,7 @@
     ]
   },
   "comments": {
-    "@headlessui/react": "v1.7.5 is ok , but v1.7.6 can prevent input of clmm -\u003E manage position -\u003E add liquitity, but don't know why"
+    "@headlessui/react": "v1.7.5 is ok , but v1.7.6 can prevent input of clmm -> manage position -> add liquitity, but don't know why"
   },
   "resolutions": {
     "@solana/spl-token": "^0.3.7",

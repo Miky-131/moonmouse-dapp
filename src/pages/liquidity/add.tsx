@@ -97,17 +97,18 @@ export default function Liquidity() {
             <p className="text-xl">☑️&nbsp;Fast and secure trading</p>
             <p className="text-xl">☑️&nbsp;Non-custodial - only you own the keys</p>
           </div> */}
-          <div className="SingleColumn">
+          <div className="SingleColumn relative">
             {/*<div className="flex justify-center">
               <LiquidityPageHead />
             </div>*/}
-            <div className="flex justify-center">
+            <div className="coming-soon-text purple-glow">Coming&nbsp;Soon!</div>
+            <div className="flex justify-center blur">
               <LiquidityCard />
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center blur">
               <UserLiquidityExhibition />
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center blur">
               <CreatePoolCardEntry />
             </div>
           </div>

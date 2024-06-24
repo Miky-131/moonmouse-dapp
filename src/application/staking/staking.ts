@@ -37,3 +37,4 @@ export const stakings = [
     isFarmLP: true
   },
 ]
+

@@ -99,16 +99,17 @@ export default function Swap() {
           <img src="/img/Swap.png" className='mx-auto' style={{ maxHeight: "60px" }} />
         </div>
         <div className="ResponsiveFlexLayout">
-          <div className="SingleColumn">
+          <div className="SingleColumn relative">
             <SwapUIContextProvider>
               <div className="flex justify-center">
                 {/* <SwapHead /> */}
               </div>
-              <div className="flex justify-center">
+              <div className="flex justify-center blurred">
                 <SwapCard />
               </div>
+              <div className="coming-soon-text purple-glow">Coming&nbsp;Soon!</div>
               {/* <UnwrapWSOL /> */}
-              <div className="flex justify-center">
+              <div className="flex justify-center blurred">
                 <KLineChart />
               </div>
             </SwapUIContextProvider>
