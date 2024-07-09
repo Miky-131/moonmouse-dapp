@@ -1157,7 +1157,7 @@ function PoolCardDatabaseBodyCollapseItemContent({ poolInfo: info }: { poolInfo:
             >
               Add Liquidity
             </Button>
-            {/* <Tooltip>
+            <Tooltip>
               <Icon
                 size="smi"
                 iconSrc="/icons/pools-farm-entry.svg"
@@ -1165,7 +1165,6 @@ function PoolCardDatabaseBodyCollapseItemContent({ poolInfo: info }: { poolInfo:
                   }`}
                 onClick={() => {
                   routeTo('/farms', {
-                    //@ts-expect-error no need to care about enum of this error
                     queryProps: objectShakeFalsy({
                       currentTab: correspondingFarm?.category ? capitalize(correspondingFarm?.category) : undefined,
                       newExpandedItemId: toPubString(correspondingFarm?.id),
@@ -1175,7 +1174,7 @@ function PoolCardDatabaseBodyCollapseItemContent({ poolInfo: info }: { poolInfo:
                 }}
               />
               <Tooltip.Panel>Farm</Tooltip.Panel>
-            </Tooltip> */}
+            </Tooltip>
             <Tooltip>
               <Icon
                 size="smi"

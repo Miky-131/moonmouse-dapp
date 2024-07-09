@@ -228,29 +228,27 @@ export function routeTo<ToPage extends keyof PageRouteConfigs>(
           searchText: ''
         })
       })
-  } 
-  // else if (toPage === '/farms/edit') {
-  //   const farmInfo = (options!.queryProps as PageRouteConfigs['/farms/edit']['queryProps']).farmInfo
-  //   const { owner } = useWallet.getState()
-  //   return router
-  //     .push({
-  //       pathname: '/farms/edit',
-  //       query: {
-  //         farmId: farmInfo?.id.toBase58()
-  //       }
-  //     })
-  //     .then(() => {
-  //       useCreateFarms.setState(
-  //         objectShakeNil({
-  //           farmId: toPubString(farmInfo.id),
-  //           poolId: farmInfo.ammId,
-  //           rewards: farmInfo.rewards.map((reward) => parsedHydratedRewardInfoToUiRewardInfo(reward)),
-  //           disableAddNewReward: !isMintEqual(farmInfo.creator, owner)
-  //         })
-  //       )
-  //     })
-  // } 
-  else if (toPage === '/pools') {
+  } /* else if (toPage === '/farms/edit') {
+    const farmInfo = (options!.queryProps as PageRouteConfigs['/farms/edit']['queryProps']).farmInfo
+    const { owner } = useWallet.getState()
+    return router
+      .push({
+        pathname: '/farms/edit',
+        query: {
+          farmId: farmInfo?.id.toBase58()
+        }
+      })
+      .then(() => {
+        useCreateFarms.setState(
+          objectShakeNil({
+            farmId: toPubString(farmInfo.id),
+            poolId: farmInfo.ammId,
+            rewards: farmInfo.rewards.map((reward) => parsedHydratedRewardInfoToUiRewardInfo(reward)),
+            disableAddNewReward: !isMintEqual(farmInfo.creator, owner)
+          })
+        )
+      })
+  } */ else if (toPage === '/pools') {
     return router.push({ pathname: '/pools' }).then(() => {
       usePools.setState(
         objectShakeFalsy({

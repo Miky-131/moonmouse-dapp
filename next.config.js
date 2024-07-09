@@ -11,8 +11,6 @@ const moduleExports = {
   trailingSlash: true,
 
   productionBrowserSourceMaps: false,
-
-  generateBuildId: () => nextBuildId({ dir: __dirname }),
 }
 
 module.exports = withBundleAnalyzer(withGlobalCssConfig(moduleExports))

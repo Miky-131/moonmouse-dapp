@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import { CSSProperties, ReactNode, useEffect, useMemo, useRef, useState } from 'react'
-
+import Head from 'next/head'
 import { ZERO } from '@raydium-io/raydium-sdk'
 
 import { twMerge } from 'tailwind-merge'
@@ -26,7 +26,7 @@ import { useUrlQuery } from '@/hooks/useUrlQuery'
 import SetExplorer from '@/pageComponents/settings/SetExplorer'
 import SetTolerance from '@/pageComponents/settings/SetTolerance'
 import { LinkAddress } from '@/types/constants'
-
+import LoadingAnimation from './LoadingAnimation'
 import useConcentrated from '@/application/concentrated/useConcentrated'
 import { useNonATATokens } from '@/application/migrateToATA/useNonATATokens'
 import toPubString from '@/functions/format/toMintString'
@@ -90,8 +90,33 @@ export default function PageLayout(props: {
   const isMobile = useAppSettings((s) => s.isMobile)
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false)
   const pathname = usePathname();
+
+  const [isPageLoaded, setIsPageLoaded] = useState(false);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setIsPageLoaded(true);
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
+
   return (
     <>
+      <Head>
+        <link
+          rel="preload"
+          href="/MoonMousePickingUpCoins.mp4"
+          as="video"
+          type="video/mp4"
+        />
+      </Head>
+      {!isPageLoaded && <LoadingAnimation />}
       <Header />
       <div
         style={{
