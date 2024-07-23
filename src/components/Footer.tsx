@@ -19,11 +19,19 @@ export default function Footer() {
               </div>
             </Button>
           </a>
-          <a href="https://x.com/Moonmouse20" target="_blank" rel="noreferrer">
+          <a href="https://x.com/moonmouse24" target="_blank" rel="noreferrer">
             <Button className={`${styles.button} ${styles.buttonShadow}`}>
               <div className="flex ml-[42px]">
                 <img src="/img/x-icon.svg" width="32px" className="mr-2" />
                 Twitter
+              </div>
+            </Button>
+          </a>
+          <a href="https://www.youtube.com/shorts/Jeu-_4trlk4" target="_blank" rel="noreferrer">
+            <Button className={`${styles.button} ${styles.buttonShadow}`}>
+              <div className="flex ml-[42px]">
+                <img src="/img/youtube-icon.png" width="32px" className="mr-2" />
+                YouTube
               </div>
             </Button>
           </a>
